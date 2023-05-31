@@ -1,0 +1,547 @@
+  
+216488@L230LTRV MINGW64 ~
+$ cd downloads
+
+216488@L230LTRV MINGW64 ~/downloads
+$ cd ..
+
+216488@L230LTRV MINGW64 ~
+$ cd desktop
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false clone  
+Cloning into 'bot'...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 29 (delta 9), reused 16 (delta 2), pack-reused 0
+Receiving objects: 100% (29/29), 38.24 KiB | 2.94 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false clone -b dev https://github.com/nirmala1924/bot.git
+fatal: destination path 'bot' already exists and is not an empty directory.
+
+216488@L230LTRV MINGW64 ~/desktop
+$ ^C
+
+216488@L230LTRV MINGW64 ~/desktop
+$ cd ..
+
+216488@L230LTRV MINGW64 ~
+$ cd downloads
+
+216488@L230LTRV MINGW64 ~/downloads
+$ git -c http.sslVerify=false clone -b dev https://github.com/nirmala1924/bot.git
+Cloning into 'bot'...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 29 (delta 9), reused 16 (delta 2), pack-reused 0
+Receiving objects: 100% (29/29), 38.24 KiB | 45.00 KiB/s, done.
+Resolving deltas: 100% (9/9), done.
+
+216488@L230LTRV MINGW64 ~/downloads
+$ cd desktop
+bash: cd: desktop: No such file or directory
+
+216488@L230LTRV MINGW64 ~/downloads
+$ cd ..
+
+216488@L230LTRV MINGW64 ~
+$ cd desktop
+
+216488@L230LTRV MINGW64 ~/desktop
+$ cd bot
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git -c http.sslVerify=false clone -b dev https://github.com/nirmala1924/bot.git
+Cloning into 'bot'...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 29 (delta 9), reused 16 (delta 2), pack-reused 0
+Receiving objects: 100% (29/29), 38.24 KiB | 4.78 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git remote -v
+origin  https://github.com/nirmala1924/bot.git (fetch)
+origin  https://github.com/nirmala1924/bot.git (push)
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git branch --list
+* main
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git checkout dev
+Switched to a new branch 'dev'
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+
+216488@L230LTRV MINGW64 ~/desktop/bot (dev)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git merge dev
+Merge made by the 'recursive' strategy.
+ UST_CODE_ANALYSER.ipynb | 766 ++++++++++++++++++++++++++++++++++++++++++++++++
+ abc - Copy.txt          |   1 +
+ chck.py                 | 128 ++++++++
+ 3 files changed, 895 insertions(+)
+ create mode 100644 UST_CODE_ANALYSER.ipynb
+ create mode 100644 abc - Copy.txt
+ create mode 100644 chck.py
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git commit -m "Merge dev branch into main"
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bot/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ ^C
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git add .
+warning: adding embedded git repository: bot
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> bot
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached bot
+hint:
+hint: See "git help submodule" for more information.
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git clean -f
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git commit -m "Merge dev branch into main"
+[main 8780f5f] Merge dev branch into main
+ 1 file changed, 1 insertion(+)
+ create mode 160000 bot
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git push origin main
+
+fatal: unable to access 'https://github.com/nirmala1924/bot.git/': SSL certificate problem: unable to get local issuer certificate
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git -c http.sslVerify=false  push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 491 bytes | 491.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/nirmala1924/bot.git
+   f7574a1..8780f5f  main -> main
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git remove remote origin
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git remote remove origin
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ git remote -v
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ cd ,,
+bash: cd: ,,: No such file or directory
+
+216488@L230LTRV MINGW64 ~/desktop/bot (main)
+$ cd ..
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false clone -b dev https://github.com/nirmala1924/Code.git
+Cloning into 'Code'...
+fatal: Remote branch dev not found in upstream origin
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git remote add origin https://github.com/nirmala1924/myrepo.git
+fatal: not a git repository (or any of the parent directories): .git
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git init
+Initialized empty Git repository in C:/Users/216488/Desktop/.git/
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git remote add origin https://github.com/nirmala1924/myrepo.git
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git remote -v
+origin  https://github.com/nirmala1924/myrepo.git (fetch)
+origin  https://github.com/nirmala1924/myrepo.git (push)
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git branch new-branch
+fatal: Not a valid object name: 'master'.
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git clone <repository_url>
+bash: syntax error near unexpected token `newline'
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git clone ^C
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ git -c http.sslVerify=false  clone https://github.com/nirmala1924/myrepo.git
+Cloning into 'myrepo'...
+warning: You appear to have cloned an empty repository.
+
+216488@L230LTRV MINGW64 ~/desktop (master)
+$ cd myrepo
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git add .
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git commit -m "Initial commit"
+[main (root-commit) 38c6878] Initial commit
+ 1 file changed, 35 insertions(+)
+ create mode 100644 git.txt
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git push origin main
+fatal: unable to access 'https://github.com/nirmala1924/myrepo.git/': SSL certificate problem: unable to get local issuer certificate
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git -c http.sslVerify=false  push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 459 bytes | 459.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nirmala1924/myrepo.git
+ * [new branch]      main -> main
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git -c http.sslVerify=false  clone https://github.com/nirmala1924/myrepo.git
+fatal: could not create work tree dir 'myrepo': No such file or directory
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo
+$ cd ..
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false  clone https://github.com/nirmala1924/myrepo.git
+Cloning into 'myrepo'...
+warning: You appear to have cloned an empty repository.
+
+216488@L230LTRV MINGW64 ~/desktop
+$ cd myrepo
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch dev
+fatal: Not a valid object name: 'main'.
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ ^C
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch dev
+fatal: Not a valid object name: 'main'.
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git remote -v
+origin  https://github.com/nirmala1924/myrepo.git (fetch)
+origin  https://github.com/nirmala1924/myrepo.git (push)
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch dev
+fatal: Not a valid object name: 'main'.
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch dev main
+fatal: Not a valid object name: 'main'.
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch -a
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ ^C
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch -r
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch main
+fatal: Not a valid object name: 'main'.
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/216488/Desktop/myrepo/.git/
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git branch dev
+fatal: Not a valid object name: 'main'.
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ ^C
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo (main)
+$ git -c http.sslVerify=false  clone https://github.com/nirmala1924/mynew.git
+fatal: could not create work tree dir 'mynew': No such file or directory
+
+216488@L230LTRV MINGW64 ~/desktop/myrepo
+$ cd ..
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false  clone https://github.com/nirmala1924/mynew.git
+Cloning into 'mynew'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+216488@L230LTRV MINGW64 ~/desktop
+$ cd mynew
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (main)
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (main)
+$ git branch
+* main
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/216488/Desktop/mynew/.git/
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (main)
+$ git branch dev
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (dev)
+$ git -c http.sslVerify=false push -u origin  dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/nirmala1924/mynew/pull/new/dev
+remote:
+To https://github.com/nirmala1924/mynew.git
+ * [new branch]      dev -> dev
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (dev)
+$ git -c http.sslVerify=false  clone -b dev https://github.com/nirmala1924/mynew.git
+Cloning into 'mynew'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (dev)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (dev)
+$ git add .
+warning: adding embedded git repository: mynew
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> mynew
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached mynew
+hint:
+hint: See "git help submodule" for more information.
+
+216488@L230LTRV MINGW64 ~/desktop/mynew (dev)
+$ cd mynew
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$ git add .
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$ git -c http.sslVerify=false push -u origin  dev
+
+Everything up-to-date
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$ git remote -v
+origin  https://github.com/nirmala1924/mynew.git (fetch)
+origin  https://github.com/nirmala1924/mynew.git (push)
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$ git commit -m "Commit message"
+[dev 571942d] Commit message
+ 1 file changed, 35 insertions(+)
+ create mode 100644 git.txt
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$ git -c http.sslVerify=false push -u origin  dev
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 522 bytes | 261.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nirmala1924/mynew.git
+   86cdedb..571942d  dev -> dev
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+$ pwd
+/c/Users/216488/desktop/mynew/mynew
+
+216488@L230LTRV MINGW64 ~/desktop/mynew/mynew (dev)
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git remote remove origin
+fatal: not a git repository (or any of the parent directories): .git
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false  clone dev https://github.com/nirmala1924/mynew.git
+fatal: repository 'dev' does not exist
+
+216488@L230LTRV MINGW64 ~/desktop
+$ git -c http.sslVerify=false  clone https://github.com/omarsiddiqi224/Cyber-Generative-AI.git
+Cloning into 'Cyber-Generative-AI'...
+remote: Enumerating objects: 60, done.
+remote: Counting objects: 100% (55/55), done.
+remote: Compressing objects: 100% (30/30), done.
+Receiving objectsremote: Total 60 (delta 25), reused 55 (delta 25), pack-reused 5
+Receiving objects: 100% (60/60), 62.56 KiB | 5.69 MiB/s, done.
+Resolving deltas: 100% (25/25), done.
+
+216488@L230LTRV MINGW64 ~/desktop
+$ cd Cyber-Generative-AI
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (main)
+$ git branches
+git: 'branches' is not a git command. See 'git --help'.
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (main)
+$ git branche
+git: 'branche' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (main)
+$ git branch
+* main
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (main)
+$ git remote add origin https://github.com/omarsiddiqi224/Cyber-Generative-AI.git
+error: remote origin already exists.
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (main)
+$ git remote -v
+origin  https://github.com/omarsiddiqi224/Cyber-Generative-AI.git (fetch)
+origin  https://github.com/omarsiddiqi224/Cyber-Generative-AI.git (push)
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (main)
+$ git checkout dev
+Switched to a new branch 'dev'
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (dev)
+$ git ls-files
+LICENSE
+README.md
+UST_CODE_ANALYSER.ipynb
+UST_CODE_SECURITY_ANALYSER.ipynb
+UstCodeSecurityAnalyzer.ipynb
+code_analyser.ipynb
+cyberGPT.py
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (dev)
+$ git rm cyberGPT.py UST_CODE_SECURITY_ANALYSER.ipynb
+rm 'UST_CODE_SECURITY_ANALYSER.ipynb'
+rm 'cyberGPT.py'
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (dev)
+$ git ls-files
+LICENSE
+README.md
+UST_CODE_ANALYSER.ipynb
+UstCodeSecurityAnalyzer.ipynb
+code_analyser.ipynb
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (dev)
+$ git commit -m "Deleted two files"
+[dev 2bbdff2] Deleted two files
+ 2 files changed, 432 deletions(-)
+ delete mode 100644 UST_CODE_SECURITY_ANALYSER.ipynb
+ delete mode 100644 cyberGPT.py
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (dev)
+$ git -c http.sslVerify=false push origin dev
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 226 bytes | 226.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/omarsiddiqi224/Cyber-Generative-AI.git
+   fb05707..2bbdff2  dev -> dev
+
+216488@L230LTRV MINGW64 ~/desktop/Cyber-Generative-AI (dev)
+$
+
+
